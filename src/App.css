@@ -1,0 +1,245 @@
+body{
+  background-color: #5EBCBB;
+
+}
+.p{
+  color: aliceblue;
+  font-size: 30px;
+  font-weight: bolder;
+  text-align: center;
+}
+.head{
+  background-image: url('./image/head.jpg');
+  background-color: #5EBCBB;
+  width: 100%;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  
+}
+
+.bgMap {
+  background-image: url('./image/backimg.jpg');
+  width: 1250px;
+  height: 730px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  /* border: 1px solid red; */
+}
+
+.image{
+  width: 1000px;
+  height: 1000px;
+}
+
+.su{
+  position: absolute;
+  left: 40%;
+  top: 22%;
+  font-weight: bold; 
+  /* 볼드체 */
+}
+.ca{
+  position: absolute;
+  left: 42%;
+  top: 35%;
+  font-weight: bold; 
+  /* 볼드체 */
+}
+.ys{
+  position: absolute;
+  left: 43%;
+  top: 75%;
+  font-weight: bold; 
+  /* 볼드체 */
+}
+.jj{
+  position: absolute;
+  left: 36%;
+  top: 89%;
+  font-weight: bold; 
+  /* 볼드체 */
+}
+.bs{
+  position: absolute;
+  left: 59%;
+  top: 62%;
+  font-weight: bold; 
+  /* 볼드체 */
+}
+.pc{
+  position: absolute;
+  left: 55%;
+  top: 17%;
+  font-weight: bold; 
+  /* 볼드체 */
+}
+.move{
+  transform: translateX(300px);
+  animation-duration: 3s;
+  width: 100px;
+  height: 100px;
+}
+/* .bgc{
+  background-color: #5EBCBB;
+  height: 150px;
+  width: 350px;
+} */
+.seoul1{
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 80px;
+  top:140px;
+}
+.seoul2{
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 190px;
+  top:140px
+}
+.seoul3{
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 300px;
+  top:140px
+}
+.cheonan1{
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 80px;
+  top: 280px;
+}
+.cheonan2{
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 190px;
+  top: 280px;
+}
+.cheonan3{
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 300px;
+  top: 280px;
+}
+.yeosu1{
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 80px;
+  top: 480px;
+}
+.yeosu2{
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 190px;
+  top: 480px;
+}
+.yeosu3{
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 300px;
+  top: 480px;
+}
+.jeju1{
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 80px;
+  top: 600px;
+}
+.jeju2{
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 190px;
+  top: 600px;
+}
+.jeju3{
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 300px;
+  top: 600px;
+}
+.busan1{
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 830px;
+  top: 480px;
+}
+.busan2{
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 940px;
+  top: 480px;
+}
+.busan3{
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 1050px;
+  top: 480px;
+}
+.pyeongchang1{
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 810px;
+  top: 100px;
+}
+.pyeongchang2{
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 920px;
+  top: 100px;
+}
+.pyeongchang3{
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 1030px;
+  top: 100px;
+}
+.move{
+  height: 100px;
+  width: 100px;
+  animation-name: moving;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  transition-timing-function: linear;
+}
+
+@keyframes moving{
+  0%{position: absolute; left: 800px; top: 10px;}
+  100%{position: absolute; left: -450px; top: 10px;}
+}
+.se1{
+  width: 900px;
+  height: 600px;
+  display: block;
+  margin: auto;
+}
+
+.video{
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  margin: 0px auto;
+  /* position: absolute; */
+}
