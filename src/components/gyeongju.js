@@ -9,17 +9,17 @@ function Gyeongju() {
         {
             name: "첨성대",
             way: "경북 경주시 인왕동 839-1",
-            image: "image/gyeongju/gyeongju1.png"
+            image: "/image/gyeongju/gyeongju1.png"
         },
         {
             name: "동궁과월지",
             way: "경북 경주시 원화로 102 안압지",
-            image: "image/gyeongju/gyeongju2.png"
+            image: "/image/gyeongju/gyeongju2.png"
         },
         {
             name: "불국사",
             way: "경북 경주시 불국로 385 불국사",
-            image: "image/gyeongju/gyeongju3.jpg"
+            image: "/image/gyeongju/gyeongju3.jpg"
         }
     ]);
     return (
@@ -29,7 +29,7 @@ function Gyeongju() {
                     place.map((data,i)=>{
                         return(
                             <Carousel.Item>
-                                <img className="se1" src={place[i].image}/> 
+                                <img className="se1" src={process.env.PUBLIC_URL+place[i].image}/> 
                                 <Carousel.Caption>
                                 <div style={{cursor:"pointer" }}onClick={()=>{
                                     navigate('/gyeongjucomp/gyeongju' + ++i)

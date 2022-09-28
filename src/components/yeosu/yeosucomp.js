@@ -29,7 +29,7 @@ function Yeosu1() {
     return (
         <div>
             <Card className="bg-dark text-white">
-                <Card.Img src="/image/yeosu/image11.jpg" alt="Card image"  className='detail' />
+                <Card.Img src={process.env.PUBLIC_URL+"/image/yeosu/image11.jpg"} alt="Card image"  className='detail' />
                 <Card.ImgOverlay>
                     <h4>하멜등대</h4><br/>
                     <Card.Text>
@@ -53,7 +53,7 @@ function Yeosu2() {
     return (
         <div>
             <Card className="bg-dark text-white">
-                <Card.Img src="/image/yeosu/image12.jpg" alt="Card image" className='detail' />
+                <Card.Img src={process.env.PUBLIC_URL+"/image/yeosu/image12.jpg"} alt="Card image" className='detail' />
                 <Card.ImgOverlay>
                     <h4>오동도</h4><br/>
                     <Card.Text>
@@ -84,7 +84,7 @@ function Yeosu3() {
     return (
         <div>
             <Card className="bg-dark text-white">
-                <Card.Img src="/image/yeosu/image13.jpg" alt="Card image"  className='detail'/>
+                <Card.Img src={process.env.PUBLIC_URL+"/image/yeosu/image13.jpg"} alt="Card image"  className='detail'/>
                 <Card.ImgOverlay style={{textAlign:'right'}}>
                     <h4>아쿠아플라넷 여수</h4><br/>
                     <Card.Text>

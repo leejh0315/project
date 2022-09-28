@@ -29,7 +29,7 @@ function Jeju1() {
     return (
         <div>
             <Card className="bg-dark text-white">
-                <Card.Img src="/image/jeju/image11.jpg" alt="Card image" className='detail' />
+                <Card.Img src={process.env.PUBLIC_URL+"/image/jeju/image11.jpg"} alt="Card image" className='detail' />
                 <Card.ImgOverlay>
                     <h4>성산일출봉</h4><br/>
                     <Card.Text className='text'>
@@ -55,7 +55,7 @@ function Jeju2() {
     return (
         <div>
             <Card className="bg-dark text-white">
-                <Card.Img src="/image/jeju/image12.jpg" alt="Card image" className='detail' />
+                <Card.Img src={process.env.PUBLIC_URL+"/image/jeju/image12.jpg"} alt="Card image" className='detail' />
                 <Card.ImgOverlay>
                     <h4>천지연폭포</h4><br/>
                     <Card.Text className='text'>
@@ -87,7 +87,7 @@ function Jeju3() {
     return (
         <div>
             <Card className="bg-dark text-white">
-                <Card.Img src="/image/jeju/image13.jpg" alt="Card image" className='detail' />
+                <Card.Img src={process.env.PUBLIC_URL+"/image/jeju/image13.jpg"} alt="Card image" className='detail' />
                 <Card.ImgOverlay>
                     <h4 className='text'>우도</h4><br/>
                     <Card.Text className='text'>

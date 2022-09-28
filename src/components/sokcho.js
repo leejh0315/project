@@ -29,7 +29,7 @@ function Sokcho() {
                     place.map((data,i)=>{
                         return(
                             <Carousel.Item>
-                                <img className="se1" src={place[i].image}/>
+                                <img className="se1" src={process.env.PUBLIC_URL+place[i].image}/>
                                 <Carousel.Caption>
                                 <div style={{cursor:"pointer" }}onClick={()=>{
                                     navigate('/sokchocomp/sokcho' + ++i)}}>

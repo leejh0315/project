@@ -41,7 +41,7 @@ function Main({isShow, setIsShow, isShow1, setIsShow1}){
                 {
                 city.map((data,i) =>{
                     return(
-                    <img className={city[i].class} src={city[i].src} style={{cursor:"pointer" }}
+                    <img className={city[i].class} src={process.env.PUBLIC_URL+city[i].src} style={{cursor:"pointer" }}
                     onClick={()=>{
                     let temp =[...isShow] //temp라는 변수에 isShow 배열을 딥카피해서 집어 넣음
                     temp[i] = !temp[i]   //temp의 0번 인덱스에, 0번  인덱스의 반대가 되는 불린값을 넣어줌
@@ -49,8 +49,8 @@ function Main({isShow, setIsShow, isShow1, setIsShow1}){
                     }}></img>                        
                     )
                 })}
-            <img className='foot' src='/image/foot.jpg'></img>
-            <img className='end logo' src='/image/end.png' style={{cursor:"pointer" }}
+            <img className='foot' src={process.env.PUBLIC_URL+'/image/foot.jpg'}></img>
+            <img className='end logo' src={process.env.PUBLIC_URL+'/image/end.png'} style={{cursor:"pointer" }}
                 onClick={()=>{
                 navigate('/end')
                 }}></img>
@@ -72,9 +72,9 @@ function BtnImg1(props){ //function은 return을 만나면 끝나버림
     if(props.isShow == true){
         return(
         <div style={{cursor:"pointer" }} onClick={()=>{navigate("/seoul")}}>
-                <img className='minibox seoul1' src="image/seoul/image1.jpg" ></img>
-                <img className='minibox seoul2' src="image/seoul/image2.jpg"></img>
-                <img className='minibox seoul3' src="image/seoul/image3.jpg" ></img>
+                <img className='minibox seoul1' src={process.env.PUBLIC_URL+"/image/seoul/image1.jpg"} ></img>
+                <img className='minibox seoul2' src={process.env.PUBLIC_URL+"/image/seoul/image2.jpg"}></img>
+                <img className='minibox seoul3' src={process.env.PUBLIC_URL+"/image/seoul/image3.jpg"} ></img>
             </div>
         )
     }
@@ -91,9 +91,9 @@ function BtnImg1(props){ //function은 return을 만나면 끝나버림
         if(props.isShow == true){
         return(
             <div style={{cursor:"pointer" }} onClick={()=>{navigate("/cheonan")}}> 
-            <img className='minibox cheonan1' src="image/cheonan/image1.jpg"></img>
-            <img className='minibox cheonan2' src="image/cheonan/image2.jpg"></img>
-            <img className='minibox cheonan3' src="image/cheonan/caimage4.jpg"></img>
+            <img className='minibox cheonan1' src={process.env.PUBLIC_URL+"/image/cheonan/image1.jpg"}></img>
+            <img className='minibox cheonan2' src={process.env.PUBLIC_URL+"/image/cheonan/image2.jpg"}></img>
+            <img className='minibox cheonan3' src={process.env.PUBLIC_URL+"/image/cheonan/caimage4.jpg"}></img>
             </div>
         )
         }
@@ -109,9 +109,9 @@ function BtnImg1(props){ //function은 return을 만나면 끝나버림
         if(props.isShow == true){
             return(
             <div  style={{cursor:"pointer" }} onClick={()=>{navigate("/yeosu")}}>
-            <img className='minibox yeosu1' src="image/yeosu/image1.jpg"></img>
-            <img className='minibox yeosu2' src="image/yeosu/image2.jpg"></img>
-            <img className='minibox yeosu3' src="image/yeosu/image3.jpg"></img>
+            <img className='minibox yeosu1' src={process.env.PUBLIC_URL+"/image/yeosu/image1.jpg"}></img>
+            <img className='minibox yeosu2' src={process.env.PUBLIC_URL+"/image/yeosu/image2.jpg"}></img>
+            <img className='minibox yeosu3' src={process.env.PUBLIC_URL+"/image/yeosu/image3.jpg"}></img>
             </div>
         )
         }
@@ -127,9 +127,9 @@ function BtnImg1(props){ //function은 return을 만나면 끝나버림
         if(props.isShow == true){
         return(
             <div  style={{cursor:"pointer" }} onClick={()=>{navigate("/jeju")}}>
-            <img className='minibox jeju1' src="image/jeju/image.jpg"></img>
-            <img className='minibox jeju2' src="image/jeju/image2.jpg"></img>
-            <img className='minibox jeju3' src="image/jeju/image3.jpg"></img>
+            <img className='minibox jeju1' src={process.env.PUBLIC_URL+"/image/jeju/image.jpg"}></img>
+            <img className='minibox jeju2' src={process.env.PUBLIC_URL+"/image/jeju/image2.jpg"}></img>
+            <img className='minibox jeju3' src={process.env.PUBLIC_URL+"/image/jeju/image3.jpg"}></img>
             </div>
         )
         }
@@ -145,9 +145,9 @@ function BtnImg1(props){ //function은 return을 만나면 끝나버림
         if(props.isShow == true){
         return(
             <div style={{cursor:"pointer" }} onClick={()=>{navigate("/busan")}}>
-            <img className='minibox busan1' src="image/busan/image1.jpg" ></img>
-            <img className='minibox busan2' src="image/busan/image2.jpg"></img>
-            <img className='minibox busan3' src="image/busan/image3.jpg" ></img>
+            <img className='minibox busan1' src={process.env.PUBLIC_URL+"/image/busan/image1.jpg"} ></img>
+            <img className='minibox busan2' src={process.env.PUBLIC_URL+"/image/busan/image2.jpg"}></img>
+            <img className='minibox busan3' src={process.env.PUBLIC_URL+"/image/busan/image3.jpg"} ></img>
             </div>)
         }
         else if(props.isShow == false){
@@ -162,9 +162,9 @@ function BtnImg1(props){ //function은 return을 만나면 끝나버림
         if(props.isShow == true){
         return(
             <div style={{cursor:"pointer" }} onClick={()=>{navigate("/pyeongchang")}}>
-            <img className='minibox pyeongchang1' src="image/pyeongchang/image1.jpg" ></img>
-            <img className='minibox pyeongchang2' src="image/pyeongchang/image2.jpg" ></img>
-            <img className='minibox pyeongchang3' src="image/pyeongchang/image3.jpg" ></img>
+            <img className='minibox pyeongchang1' src={process.env.PUBLIC_URL+"/image/pyeongchang/image1.jpg"} ></img>
+            <img className='minibox pyeongchang2' src={process.env.PUBLIC_URL+"/image/pyeongchang/image2.jpg"} ></img>
+            <img className='minibox pyeongchang3' src={process.env.PUBLIC_URL+"/image/pyeongchang/image3.jpg"} ></img>
             </div>
         )
         }
@@ -180,9 +180,9 @@ function BtnImg1(props){ //function은 return을 만나면 끝나버림
         if(props.isShow == true){
         return(
             <div style={{cursor:"pointer" }} onClick={()=>{navigate("/gyeongju")}}>
-            <img className='minibox gyeongju1' src="image/gyeongju/gyeongju1.png" ></img>
-            <img className='minibox gyeongju2' src="image/gyeongju/gyeongju2.png" ></img>
-            <img className='minibox gyeongju3' src="image/gyeongju/gyeongju3.jpg"></img>
+            <img className='minibox gyeongju1' src={process.env.PUBLIC_URL+"/image/gyeongju/gyeongju1.png"} ></img>
+            <img className='minibox gyeongju2' src={process.env.PUBLIC_URL+"/image/gyeongju/gyeongju2.png"} ></img>
+            <img className='minibox gyeongju3' src={process.env.PUBLIC_URL+"/image/gyeongju/gyeongju3.jpg"}></img>
             </div>
         )
         }
@@ -198,9 +198,9 @@ function BtnImg1(props){ //function은 return을 만나면 끝나버림
         if(props.isShow == true){
         return(
             <div style={{cursor:"pointer" }} onClick={()=>{navigate("/jeonju")}}>
-            <img className='minibox jeonju1' src="/image/jeonju/jeonju1.jpg" ></img>
-            <img className='minibox jeonju2' src="/image/jeonju/jeonju2.jpeg" ></img>
-            <img className='minibox jeonju3' src="/image/jeonju/jeonju3.jpg"></img>
+            <img className='minibox jeonju1' src={process.env.PUBLIC_URL+"/image/jeonju/jeonju1.jpg"} ></img>
+            <img className='minibox jeonju2' src={process.env.PUBLIC_URL+"/image/jeonju/jeonju2.jpeg"} ></img>
+            <img className='minibox jeonju3' src={process.env.PUBLIC_URL+"/image/jeonju/jeonju3.jpg"}></img>
             </div>
         )
         }
@@ -216,9 +216,9 @@ function BtnImg1(props){ //function은 return을 만나면 끝나버림
         if(props.isShow == true){
         return(
             <div style={{cursor:"pointer" }} onClick={()=>{navigate("/sokcho")}}>
-            <img className='minibox sokcho1' src="/image/sokcho/image1.jpg" ></img>
-            <img className='minibox sokcho2' src="/image/sokcho/image2.jpg" ></img>
-            <img className='minibox sokcho3' src="/image/sokcho/image3.jpg"></img>
+            <img className='minibox sokcho1' src={process.env.PUBLIC_URL+"/image/sokcho/image1.jpg"} ></img>
+            <img className='minibox sokcho2' src={process.env.PUBLIC_URL+"/image/sokcho/image2.jpg"} ></img>
+            <img className='minibox sokcho3' src={process.env.PUBLIC_URL+"/image/sokcho/image3.jpg"}></img>
             </div>
         )
         }

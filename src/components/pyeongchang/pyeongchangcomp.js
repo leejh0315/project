@@ -30,7 +30,7 @@ function Pyeongchang1() {
     return (
         <div>
             <Card className="bg-dark text-white">
-                <Card.Img src="/image/pyeongchang/image11.jpg" alt="Card image" className='detail' />
+                <Card.Img src={process.env.PUBLIC_URL+"/image/pyeongchang/image11.jpg"} alt="Card image" className='detail' />
                 <Card.ImgOverlay>
                     <h4>대관령 양떼목장</h4><br/>
                     <Card.Text className='text'>
@@ -57,7 +57,7 @@ function Pyeongchang2() {
     return (
         <div>
             <Card className="bg-dark text-white">
-                <Card.Img src="/image/pyeongchang/image12.jpg" alt="Card image" className='detail' />
+                <Card.Img src={process.env.PUBLIC_URL+"/image/pyeongchang/image12.jpg"} alt="Card image" className='detail' />
                 <Card.ImgOverlay>
                     <h4>봉평 메밀밭</h4><br/>
                     <Card.Text className='textcolor'>
@@ -79,7 +79,7 @@ function Pyeongchang3() {
     return (
         <div>
             <Card className="bg-dark text-white">
-                <Card.Img src="/image/pyeongchang/image13.jpg" alt="Card image" className='detail' />
+                <Card.Img src={process.env.PUBLIC_URL+"/image/pyeongchang/image13.jpg"} alt="Card image" className='detail' />
                 <Card.ImgOverlay>
                     <h4>발왕산 스카이워크</h4><br/>
                     <Card.Text className='text'>

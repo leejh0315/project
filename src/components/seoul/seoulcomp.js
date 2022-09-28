@@ -30,7 +30,7 @@ function Seoul1() {
     return (
         <div>
             <Card className="bg-dark text-white">
-                <Card.Img src="/image/seoul/image11.jpg" alt="Card image" className='detail' />
+                <Card.Img src={process.env.PUBLIC_URL+"/image/seoul/image11.jpg"} alt="Card image" className='detail' />
                 <Card.ImgOverlay>
                     <h4>서울 남산 타워</h4><br/>
                     <Card.Text className='text'>
@@ -61,7 +61,7 @@ function Seoul2() {
     return (
         <div>
             <Card className="bg-dark text-white">
-                <Card.Img src="/image/seoul/image12.jpg" alt="Card image" className='detail'/>
+                <Card.Img src={process.env.PUBLIC_URL+"/image/seoul/image12.jpg"} alt="Card image" className='detail'/>
                 <Card.ImgOverlay>
                     <h4>경복궁</h4><br/>
                     <Card.Text className='text'>
@@ -87,7 +87,7 @@ function Seoul3() {
     return (
         <div>
             <Card className="bg-dark text-white">
-                <Card.Img src="/image/seoul/image13.jpg" alt="Card image" className='detail' />
+                <Card.Img src={process.env.PUBLIC_URL+"/image/seoul/image13.jpg"} alt="Card image" className='detail' />
                 <Card.ImgOverlay>
                     <h4>여의도 한강공원</h4><br/>
                     <Card.Text className='text'>

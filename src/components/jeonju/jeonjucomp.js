@@ -30,7 +30,7 @@ function Jeonju1() {
     return (
         <div>
             <Card className="bg-dark text-white">
-                <Card.Img src="/image/jeonju/image11.jpeg" alt="Card image" className='detail' />
+                <Card.Img src={process.env.PUBLIC_URL+"/image/jeonju/image11.jpeg"} alt="Card image" className='detail' />
                 <Card.ImgOverlay>
                     <h4>전주 한옥마을</h4><br/>
                     <Card.Text>
@@ -61,7 +61,7 @@ function Jeonju2() {
     return (
         <div>
             <Card className="bg-dark text-white">
-                <Card.Img src="/image/jeonju/jeonju12.jpg" alt="Card image" className='detail' />
+                <Card.Img src={process.env.PUBLIC_URL+"/image/jeonju/jeonju12.jpg"} alt="Card image" className='detail' />
                 <Card.ImgOverlay>
                     <h4>전동성당</h4><br/>
                     <Card.Text>
@@ -88,7 +88,7 @@ function Jeonju3() {
     return (
         <div>
             <Card className="bg-dark text-white">
-                <Card.Img src="/image/jeonju/jeonju13.jpg" alt="Card image" className='detail' />
+                <Card.Img src={process.env.PUBLIC_URL+"/image/jeonju/jeonju13.jpg"} alt="Card image" className='detail' />
                 <Card.ImgOverlay>
                     <h4>전주동물원</h4><br/>
                     <Card.Text>

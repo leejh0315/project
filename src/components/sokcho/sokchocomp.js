@@ -30,7 +30,7 @@ function Sokcho1() {
     return (
         <div>
             <Card className="bg-dark text-white">
-                <Card.Img src="/image/sokcho/image12.jpg" alt="Card image" className='detail' />
+                <Card.Img src={process.env.PUBLIC_URL+"/image/sokcho/image12.jpg"} alt="Card image" className='detail' />
                 <Card.ImgOverlay>
                     <h4>울산바위</h4><br/>
                     <Card.Text>
@@ -59,7 +59,7 @@ function Sokcho3() {
     return (
         <div>
             <Card className="bg-dark text-white">
-                <Card.Img src="/image/sokcho/image13.JPG" alt="Card image" className='detail' />
+                <Card.Img src={process.env.PUBLIC_URL+"/image/sokcho/image13.JPG"} alt="Card image" className='detail' />
                 <Card.ImgOverlay>
                     <h4>설악산</h4><br/>
                     <Card.Text>
@@ -93,7 +93,7 @@ function Sokcho2() {
     return (
         <div>
             <Card className="bg-dark text-white">
-                <Card.Img src="/image/sokcho/image11.jpg" alt="Card image" className='detail' />
+                <Card.Img src={process.env.PUBLIC_URL+"/image/sokcho/image11.jpg"} alt="Card image" className='detail' />
                 <Card.ImgOverlay>
                     <h4>속초아이 대관람차</h4><br/>
                     <Card.Text>

@@ -42,11 +42,11 @@ function App() {
   return (
     <div>
       <div className='hi'>
-        <img src='/image/head.png' className='head'
+        <img src={process.env.PUBLIC_URL +'/image/head.png'} className='head'
         onClick={()=>{ 
         navigate("/main")
         }}></img>
-        <img className='move' src="/image/moving.png"></img>
+        <img className='move' src={process.env.PUBLIC_URL +"/image/moving.png"}></img>
       </div>
 
       <Routes>

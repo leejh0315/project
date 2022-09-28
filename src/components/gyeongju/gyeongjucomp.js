@@ -30,7 +30,7 @@ function Gyeongju1() {
     return (
         <div>
             <Card className="bg-dark text-white">
-                <Card.Img src="/image/gyeongju/image11.jpg" alt="Card image" className='detail' />
+                <Card.Img src={process.env.PUBLIC_URL+"/image/gyeongju/image11.jpg"} alt="Card image" className='detail' />
                 <Card.ImgOverlay>
                     <h4>첨성대</h4><br/>
                     <Card.Text>
@@ -56,7 +56,7 @@ function Gyeongju2() {
     return (
         <div>
             <Card className="bg-dark text-white">
-                <Card.Img src="/image/gyeongju/image12.jpg" alt="Card image" className='detail' />
+                <Card.Img src={process.env.PUBLIC_URL+"/image/gyeongju/image12.jpg"} alt="Card image" className='detail' />
                 <Card.ImgOverlay>
                     <h4>동궁과월지</h4><br/>
                     <Card.Text>
@@ -89,7 +89,7 @@ function Gyeongju3() {
     return (
         <div>
             <Card className="bg-dark text-white">
-                <Card.Img src="/image/gyeongju/image13.jpg" alt="Card image" className='detail' />
+                <Card.Img src={process.env.PUBLIC_URL+"/image/gyeongju/image13.jpg"} alt="Card image" className='detail' />
                 <Card.ImgOverlay>
                     <h4>불국사</h4><br/>
                     <Card.Text>

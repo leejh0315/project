@@ -33,7 +33,7 @@ function Busan1() {
     return (
         <div>
             <Card className="bg-dark text-white">
-                <Card.Img src="/image/busan/image11.jpg" alt="Card image" className='detail' />
+                <Card.Img src= {process.env.PUBLIC_URL+"/image/busan/image11.jpg"} alt="Card image" className='detail' />
                 <Card.ImgOverlay className='text-right'>
                     <h4>해운대 해수욕장</h4><br/>
                     <Card.Text>
@@ -56,7 +56,7 @@ function Busan2() {
     return (
         <div>
             <Card className="bg-dark text-white">
-                <Card.Img src="/image/busan/image12.jpg" alt="Card image" className='detail' />
+                <Card.Img src={process.env.PUBLIC_URL+"/image/busan/image12.jpg" }alt="Card image" className='detail' />
                 <Card.ImgOverlay>
                     <h4>흰여울 문화마을</h4><br/>
                     <Card.Text>
@@ -79,7 +79,7 @@ function Busan3() {
     return (
         <div>
             <Card className="bg-dark text-white">
-                <Card.Img src="/image/busan/image13.jpg" alt="Card image" className='detail' />
+                <Card.Img src={process.env.PUBLIC_URL+"/image/busan/image13.jpg"} alt="Card image" className='detail' />
                 <Card.ImgOverlay>
                     <h4>해동 용궁사</h4><br/>
                     <Card.Text>

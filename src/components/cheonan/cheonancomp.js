@@ -30,7 +30,7 @@ function Cheonan1() {
     return (
         <div>
             <Card className="bg-dark text-white">
-                <Card.Img src="/image/cheonan/image11.jpg" alt="Card image" className='detail' />
+                <Card.Img src={process.env.PUBLIC_URL+"/image/cheonan/image11.jpg"} alt="Card image" className='detail' />
                 <Card.ImgOverlay>
                     <h4>독립기념관</h4><br/>
                     <Card.Text className='dok'>
@@ -53,7 +53,7 @@ function Cheonan2() {
     return (
         <div>
             <Card className="bg-dark text-white">
-                <Card.Img src="/image/cheonan/image12.jpg" alt="Card image" className='detail' />
+                <Card.Img src={process.env.PUBLIC_URL+"/image/cheonan/image12.jpg"} alt="Card image" className='detail' />
                 <Card.ImgOverlay>
                     <h4>천호지</h4><br/>
                     <Card.Text>
@@ -80,7 +80,7 @@ function Cheonan3() {
     return (
         <div>
             <Card className="bg-dark text-white, yoo">
-                <Card.Img src="/image/cheonan/image13.jpg" alt="Card image" className='detail'/>
+                <Card.Img src={process.env.PUBLIC_URL+"/image/cheonan/image13.jpg"} alt="Card image" className='detail'/>
                 <Card.ImgOverlay>
                     <h4>유관순 열사 기념관</h4><br/>
                     <Card.Text >
