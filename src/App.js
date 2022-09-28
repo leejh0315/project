@@ -5,42 +5,76 @@
 
 //배열로 된 isShow
 import './App.css';
-import moving from './image/moving.png';
 import { useState } from 'react';
-// import bsimage2 from './image/busan/bsimage2.jpg';
-import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useNavigate, useParams, useHistory } from 'react-router-dom';
 import Intro from './components/intro';
+import End from './components/end';
 import Main from './components/main';
+
 import Seoul from './components/seoul';
 import Cheonan from './components/cheonan';
 import Yeosu from './components/yeosu';
 import Jeju from './components/jeju';
 import Busan from './components/busan';
 import Pyeongchang from './components/pyeongchang';
+import Gyeongju from './components/gyeongju';
+import Jeonju from './components/jeonju';
+import Sokcho from './components/sokcho';
+
+import Busancomp from './components/busan/busancomp';
+import Cheonancomp from './components/cheonan/cheonancomp';
+import Seoulcomp from './components/seoul/seoulcomp';
+import Yeosucomp from './components/yeosu/yeosucomp';
+import Jejucomp from './components/jeju/jejucomp';
+import Pyeongchangcomp from './components/pyeongchang/pyeongchangcomp';
+import Gyeongjucomp from './components/gyeongju/gyeongjucomp';
+import Jeonjucomp from './components/jeonju/jeonjucomp';
+import Sokchocomp from './components/sokcho/sokchocomp';
+
+
 //1번 인덱스만 true, 나머지 인덱스는 false가 되도록 세팅
 
 function App() {
-  let [isShow, setIsShow] = useState([false, false, false, false, false, false]);
+  let [isShow, setIsShow] = useState([false, false, false, false, false, false, false, false, false]);
+  let [isShow1, setIsShow1] = useState([false, false, false, false, false, false, false, false, false]);
   let navigate = useNavigate();
+  let {item_id} = useParams();
   return (
     <div>
-      
-      <div className='head'  style={{cursor:"pointer" }}
-      onClick={()=>{
+      <div className='hi'>
+        <img src='/image/head.png' className='head'
+        onClick={()=>{ 
         navigate("/main")
-      }}>
-      <img className='move' src={moving}></img>
+        }}></img>
+        <img className='move' src="/image/moving.png"></img>
       </div>
 
       <Routes>
           <Route path='/'element={<Intro/>}></Route>
-          <Route path='/main' element={<Main isShow ={isShow} setIsShow = {setIsShow}/>}></Route>
+          <Route path='/end'element={<End/>}></Route>
+          <Route path='/main' element={<Main
+          isShow ={isShow} setIsShow = {setIsShow}
+          isShow1 = {isShow1} setIsShow1 = {setIsShow1}/>}></Route>
           <Route path='/seoul' element={<Seoul/>}></Route>
           <Route path='/cheonan' element={<Cheonan/>}></Route>
           <Route path='/yeosu' element={<Yeosu/>}></Route>
           <Route path='/jeju' element={<Jeju/>}></Route>
           <Route path='/busan' element={<Busan/>}></Route>
           <Route path='/pyeongchang' element={<Pyeongchang/>}></Route>
+          <Route path='/gyeongju' element={<Gyeongju/>}></Route>
+          <Route path='/jeonju' element={<Jeonju/>}></Route>
+          <Route path='/sokcho' element={<Sokcho/>}></Route>
+
+          <Route path='/busancomp/:item_id' element={<Busancomp/>}></Route>
+          <Route path='/cheonancomp/:item_id' element={<Cheonancomp/>}></Route>
+          <Route path='/seoulcomp/:item_id' element={<Seoulcomp/>}></Route>
+          <Route path='/yeosucomp/:item_id' element={<Yeosucomp/>}></Route>
+          <Route path='/jejucomp/:item_id' element={<Jejucomp/>}></Route>
+          <Route path='/pyeongchangcomp/:item_id' element={<Pyeongchangcomp/>}></Route>
+          <Route path='/gyeongjucomp/:item_id' element={<Gyeongjucomp/>}></Route>
+          <Route path='/jeonjucomp/:item_id' element={<Jeonjucomp/>}></Route>
+          <Route path='/sokchocomp/:item_id' element={<Sokchocomp/>}></Route>
+
       </Routes>
     </div>
   )

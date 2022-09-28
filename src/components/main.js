@@ -1,74 +1,69 @@
 import Button from 'react-bootstrap/Button';
 import {Container} from "react-bootstrap"
 import { useState } from 'react';
-import suimage1 from './../image/seoul/suimage1.jpg';
-import suimage2 from './../image/seoul/suimage2.jpg';
-import suimage3 from './../image/seoul/suimage3.jpg';
-import caimage1 from './../image/cheonan/caimage1.jpg';
-import caimage2 from './../image/cheonan/caimage2.jpg';
-import caimage3 from './../image/cheonan/caimage3.jpg';
-import ysimage1 from './../image/yeosu/ysimage1.jpg';
-import ysimage2 from './../image/yeosu/ysimage2.jpg';
-import ysimage3 from './../image/yeosu/ysimage3.jpg';
-import jjimage1 from './../image/jeju/jjimage1.jpg';
-import jjimage2 from './../image/jeju/jjimage2.jpg';
-import jjimage3 from './../image/jeju/jjimage3.jpg';
-import bsimage1 from './../image/busan/bsimage1.jpg';
-// import bsimage2 from './../image/busan/bsimage2.jpg';
-import bsimage3 from './../image/busan/bsimage3.jpg';
-import pcimage1 from './../image/pyeongchang/pcimage1.jpg';
-import pcimage2 from './../image/pyeongchang/pcimage2.jpg';
-import pcimage3 from './../image/pyeongchang/pcimage3.jpg';
 import {useNavigate} from 'react-router-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-function Main({isShow, setIsShow}){
-    return(
-        <div class="bgMap">
-        <Button className='su' variant="secondary"
-        onClick={()=>{
-            let temp =[...isShow] //temp라는 변수에 isShow 배열을 딥카피해서 집어 넣음
-            temp[0] = !temp[0]   //temp의 0번 인덱스에, 0번  인덱스의 반대가 되는 불린값을 넣어줌
-            setIsShow(temp) //temp를 setIsShow에 집어 넣음
-        }}>서울</Button>{' '}
-        <Button className='ca' variant="secondary"
-        onClick={()=>{
-            let temp =[...isShow] //temp라는 변수에 isShow 배열을 딥카피해서 집어 넣음
-            temp[1] = !temp[1]   //temp의 1번 인덱스에, 1번  인덱스의 반대가 되는 불린값을 넣어줌
-            setIsShow(temp) //temp를 setIsShow에 집어 넣음
-        }}>천안</Button>{' '}
-        <Button className='ys' variant="secondary"
-        onClick={()=>{
-          let temp =[...isShow] //temp라는 변수에 isShow 배열을 딥카피해서 집어 넣음
-          temp[2] = !temp[2]   //temp의 2번 인덱스에, 2번  인덱스의 반대가 되는 불린값을 넣어줌
-          setIsShow(temp) //temp를 setIsShow에 집어 넣음
-        }}>여수</Button>{' '}
-        <Button className='jj' variant="secondary"
-        onClick={()=>{
-          let temp =[...isShow] //temp라는 변수에 isShow 배열을 딥카피해서 집어 넣음
-          temp[3] = !temp[3]   //temp의 3번 인덱스에, 3번  인덱스의 반대가 되는 불린값을 넣어줌
-          setIsShow(temp) //temp를 setIsShow에 집어 넣음
-        }}>제주</Button>{' '}
-        <Button className='bs' variant="secondary"
-        onClick={()=>{
-          let temp =[...isShow] //temp라는 변수에 isShow 배열을 딥카피해서 집어 넣음
-          temp[4] = !temp[4]   //temp의 4번 인덱스에, 4번  인덱스의 반대가 되는 불린값을 넣어줌
-          setIsShow(temp) //temp를 setIsShow에 집어 넣음
-        }}>부산</Button>{' '}
-        <Button className='pc' variant="secondary"
-        onClick={()=>{
-          let temp =[...isShow] //temp라는 변수에 isShow 배열을 딥카피해서 집어 넣음
-          temp[5] = !temp[5]   //temp의 5번 인덱스에, 5번  인덱스의 반대가 되는 불린값을 넣어줌
-          setIsShow(temp) //temp를 setIsShow에 집어 넣음
-        }}>평창</Button>{' '}
-          {/* <Route path = "/seoul1" element = {<UncontrolledExample/>}></Route> */}
 
-        <BtnImg1 isShow={isShow[0]}></BtnImg1>
-        <BtnImg2 isShow={isShow[1]}></BtnImg2>
-        <BtnImg3 isShow={isShow[2]}></BtnImg3>
-        <BtnImg4 isShow={isShow[3]}></BtnImg4>
-        <BtnImg5 isShow={isShow[4]}></BtnImg5>
-        <BtnImg6 isShow={isShow[5]}></BtnImg6>
+function Main({isShow, setIsShow, isShow1, setIsShow1}){
+    let navigate = useNavigate();
+    let[city, setCity] = useState([
+        {   class:"su logo",
+            src: "/image/city3/seoul.png"
+        },{
+            class: "ca logo",
+            src:"/image/city3/cheonan.png"
+        },{
+            class:"ys logo",
+            src:"/image/city3/yeosu.png"
+        },{
+            class:"jj logo",
+            src:"/image/city3/jeju1.png"
+        },{
+            class:"bs logo",
+            src:"/image/city3/busan.png"
+        },{
+            class:"pc logo",
+            src:"/image/city3/pyeongchang.png"
+        },{
+            class:"gj logo",
+            src:"/image/city3/gyeongju.png"
+        },{
+            class:"jj1 logo",
+            src:"/image/city3/jeonju.png"
+        },{
+            class:"sc logo",
+            src:"/image/city3/sokcho.png"
+        }]);
+    return(
+        <div className='hi'>
+            <div className="bgMap">
+                {
+                city.map((data,i) =>{
+                    return(
+                    <img className={city[i].class} src={city[i].src} style={{cursor:"pointer" }}
+                    onClick={()=>{
+                    let temp =[...isShow] //temp라는 변수에 isShow 배열을 딥카피해서 집어 넣음
+                    temp[i] = !temp[i]   //temp의 0번 인덱스에, 0번  인덱스의 반대가 되는 불린값을 넣어줌
+                    setIsShow(temp) //temp를 setIsShow에 집어 넣음
+                    }}></img>                        
+                    )
+                })}
+            <img className='foot' src='/image/foot.jpg'></img>
+            <img className='end logo' src='/image/end.png' style={{cursor:"pointer" }}
+                onClick={()=>{
+                navigate('/end')
+                }}></img>
+            </div>
+        <BtnImg1 isShow={isShow[0]} isShow1 = {isShow1[0]}  setIsShow1 = {setIsShow1[0]}></BtnImg1>
+        <BtnImg2 isShow={isShow[1]} isShow1 = {isShow1[1]}></BtnImg2>
+        <BtnImg3 isShow={isShow[2]} isShow1 = {isShow1[2]}></BtnImg3>
+        <BtnImg4 isShow={isShow[3]} isShow1 = {isShow1[3]}></BtnImg4>
+        <BtnImg5 isShow={isShow[4]} isShow1 = {isShow1[4]}></BtnImg5>
+        <BtnImg6 isShow={isShow[5]} isShow1 = {isShow1[5]}></BtnImg6>
+        <BtnImg7 isShow={isShow[6]} isShow1 = {isShow1[6]}></BtnImg7>
+        <BtnImg8 isShow={isShow[7]} isShow1 = {isShow1[7]}></BtnImg8>
+        <BtnImg9 isShow={isShow[8]} isShow1 = {isShow1[8]}></BtnImg9>
     </div>
     )
 }
@@ -76,22 +71,11 @@ function BtnImg1(props){ //function은 return을 만나면 끝나버림
     let navigate = useNavigate();
     if(props.isShow == true){
         return(
-        <div className='bgc'>
-            <img className='seoul1' src={suimage1} style={{cursor:"pointer" }}
-            onClick={()=>{
-            navigate("/seoul")
-            }}></img>        
-            <img className='seoul2' src={suimage2} style={{cursor:"pointer" }}
-            onClick={()=>{
-            navigate("/seoul")
-            
-            }}></img>
-            <img className='seoul3' src={suimage3} style={{cursor:"pointer" }}
-            onClick={()=>{
-            navigate("/seoul")
-            
-            }}></img>
-        </div>
+        <div style={{cursor:"pointer" }} onClick={()=>{navigate("/seoul")}}>
+                <img className='minibox seoul1' src="image/seoul/image1.jpg" ></img>
+                <img className='minibox seoul2' src="image/seoul/image2.jpg"></img>
+                <img className='minibox seoul3' src="image/seoul/image3.jpg" ></img>
+            </div>
         )
     }
     else if(props.isShow == false){
@@ -99,35 +83,23 @@ function BtnImg1(props){ //function은 return을 만나면 끝나버림
             <div></div>
         )
     }
+
 }
     function BtnImg2(props){ //function은 return을 만나면 끝나버림
     let navigate = useNavigate();
 
         if(props.isShow == true){
         return(
-            <div>
-            <img className='cheonan1' src={caimage1} style={{cursor:"pointer" }}
-            onClick={()=>{
-            navigate("/cheonan")
-            
-            }}></img>
-            <img className='cheonan2' src={caimage2} style={{cursor:"pointer" }}
-            onClick={()=>{
-            navigate("/cheonan")
-            
-            }}></img>
-            <img className='cheonan3' src={caimage3} style={{cursor:"pointer" }}
-            onClick={()=>{
-            navigate("/cheonan")
-            
-            }}></img>
+            <div style={{cursor:"pointer" }} onClick={()=>{navigate("/cheonan")}}> 
+            <img className='minibox cheonan1' src="image/cheonan/image1.jpg"></img>
+            <img className='minibox cheonan2' src="image/cheonan/image2.jpg"></img>
+            <img className='minibox cheonan3' src="image/cheonan/caimage4.jpg"></img>
             </div>
         )
         }
         else if(props.isShow == false){
             return(
-                <div>
-                </div>
+                <div></div>
             )
         }
     }
@@ -136,23 +108,10 @@ function BtnImg1(props){ //function은 return을 만나면 끝나버림
     
         if(props.isShow == true){
             return(
-            <div>
-            <img className='yeosu1' src={ysimage1} style={{cursor:"pointer" }}
-            onClick={()=>{
-            navigate("/yeosu")
-            
-        }}></img>
-            <img className='yeosu2' src={ysimage2} style={{cursor:"pointer" }}
-            onClick={()=>{
-            navigate("/yeosu")
-            
-            }}></img>
-            <img className='yeosu3' src={ysimage3} style={{cursor:"pointer" }}
-            onClick={()=>{
-            navigate("/yeosu")
-            
-        }}></img>
-
+            <div  style={{cursor:"pointer" }} onClick={()=>{navigate("/yeosu")}}>
+            <img className='minibox yeosu1' src="image/yeosu/image1.jpg"></img>
+            <img className='minibox yeosu2' src="image/yeosu/image2.jpg"></img>
+            <img className='minibox yeosu3' src="image/yeosu/image3.jpg"></img>
             </div>
         )
         }
@@ -167,22 +126,10 @@ function BtnImg1(props){ //function은 return을 만나면 끝나버림
     
         if(props.isShow == true){
         return(
-            <div>
-            <img className='jeju1' src={jjimage1} style={{cursor:"pointer" }}
-            onClick={()=>{
-            navigate("/jeju")
-            
-            }}></img>
-            <img className='jeju2' src={jjimage2} style={{cursor:"pointer" }}
-            onClick={()=>{
-            navigate("/jeju")
-            
-            }}></img>
-            <img className='jeju3' src={jjimage3} style={{cursor:"pointer" }}
-            onClick={()=>{
-            navigate("/jeju")
-            
-            }}></img>
+            <div  style={{cursor:"pointer" }} onClick={()=>{navigate("/jeju")}}>
+            <img className='minibox jeju1' src="image/jeju/image.jpg"></img>
+            <img className='minibox jeju2' src="image/jeju/image2.jpg"></img>
+            <img className='minibox jeju3' src="image/jeju/image3.jpg"></img>
             </div>
         )
         }
@@ -197,24 +144,11 @@ function BtnImg1(props){ //function은 return을 만나면 끝나버림
 
         if(props.isShow == true){
         return(
-            <div>
-            <img className='busan1' src={bsimage1} style={{cursor:"pointer" }}
-            onClick={()=>{
-            navigate("/busan")
-            
-            }}></img>
-            {/* <img className='busan2' src={bsimage2} style={{cursor:"pointer" }}
-            onClick={()=>{
-            navigate("/busan")
-            
-          }}></img> */}
-            <img className='busan3' src={bsimage3} style={{cursor:"pointer" }}
-            onClick={()=>{
-            navigate("/busan")
-            
-            }}></img>
-            </div>
-        )
+            <div style={{cursor:"pointer" }} onClick={()=>{navigate("/busan")}}>
+            <img className='minibox busan1' src="image/busan/image1.jpg" ></img>
+            <img className='minibox busan2' src="image/busan/image2.jpg"></img>
+            <img className='minibox busan3' src="image/busan/image3.jpg" ></img>
+            </div>)
         }
         else if(props.isShow == false){
         return(
@@ -227,23 +161,64 @@ function BtnImg1(props){ //function은 return을 만나면 끝나버림
     
         if(props.isShow == true){
         return(
-            <div>
-            <img className='pyeongchang1' src={pcimage1} style={{cursor:"pointer" }}
-            onClick={()=>{
-            navigate("/pyeongchang")
-            
-            }}></img>
-            <img className='pyeongchang2' src={pcimage2} style={{cursor:"pointer" }}
-            onClick={()=>{
-            navigate("/pyeongchang")
-            
-            }}></img>
-            <img className='pyeongchang3' src={pcimage3} style={{cursor:"pointer" }}
-            onClick={()=>{
-            navigate("/pyeongchang")
-            
-            }}></img>
-
+            <div style={{cursor:"pointer" }} onClick={()=>{navigate("/pyeongchang")}}>
+            <img className='minibox pyeongchang1' src="image/pyeongchang/image1.jpg" ></img>
+            <img className='minibox pyeongchang2' src="image/pyeongchang/image2.jpg" ></img>
+            <img className='minibox pyeongchang3' src="image/pyeongchang/image3.jpg" ></img>
+            </div>
+        )
+        }
+        else if(props.isShow == false){
+        return(
+            <div></div>
+            )
+        } 
+    }
+    function BtnImg7(props){ //function은 return을 만나면 끝나버림
+        let navigate = useNavigate();
+    
+        if(props.isShow == true){
+        return(
+            <div style={{cursor:"pointer" }} onClick={()=>{navigate("/gyeongju")}}>
+            <img className='minibox gyeongju1' src="image/gyeongju/gyeongju1.png" ></img>
+            <img className='minibox gyeongju2' src="image/gyeongju/gyeongju2.png" ></img>
+            <img className='minibox gyeongju3' src="image/gyeongju/gyeongju3.jpg"></img>
+            </div>
+        )
+        }
+        else if(props.isShow == false){
+        return(
+            <div></div>
+            )
+        } 
+    }
+    function BtnImg8(props){ //function은 return을 만나면 끝나버림
+        let navigate = useNavigate();
+    
+        if(props.isShow == true){
+        return(
+            <div style={{cursor:"pointer" }} onClick={()=>{navigate("/jeonju")}}>
+            <img className='minibox jeonju1' src="/image/jeonju/jeonju1.jpg" ></img>
+            <img className='minibox jeonju2' src="/image/jeonju/jeonju2.jpeg" ></img>
+            <img className='minibox jeonju3' src="/image/jeonju/jeonju3.jpg"></img>
+            </div>
+        )
+        }
+        else if(props.isShow == false){
+        return(
+            <div></div>
+            )
+        } 
+    }
+    function BtnImg9(props){ //function은 return을 만나면 끝나버림
+        let navigate = useNavigate();
+    
+        if(props.isShow == true){
+        return(
+            <div style={{cursor:"pointer" }} onClick={()=>{navigate("/sokcho")}}>
+            <img className='minibox sokcho1' src="/image/sokcho/image1.jpg" ></img>
+            <img className='minibox sokcho2' src="/image/sokcho/image2.jpg" ></img>
+            <img className='minibox sokcho3' src="/image/sokcho/image3.jpg"></img>
             </div>
         )
         }

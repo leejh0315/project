@@ -9,24 +9,29 @@ body{
   text-align: center;
 }
 .head{
-  background-image: url('./image/head.jpg');
   background-color: #5EBCBB;
-  width: 100%;
-  height: 150px;
+  width: 450px;
+  height: 100px;
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: center;
-  
+  cursor:pointer;
+  margin:0px auto;
+  display: inline-block;
+  position: relative;
+}
+.hi{
+  text-align: center;
 }
 
 .bgMap {
-  background-image: url('./image/backimg.jpg');
+  background-image: url('/public/image/backimg.jpg');
   width: 1250px;
-  height: 730px;
+  height: 780px;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
   position: relative;
+  text-align: center;
   /* border: 1px solid red; */
 }
 
@@ -34,48 +39,91 @@ body{
   width: 1000px;
   height: 1000px;
 }
-
+.foot{
+  height: 150px;
+  position:absolute;
+  left: 65%;
+  top: 70%;
+}
+.end{
+  height: 40px;
+  position: absolute;
+  left: 1000px;
+  top: 700px;
+  border: 3px solid white;
+}
+.end1{
+  height: 50px;
+}
+.intro{
+  height: 30px;
+  text-align: center;
+}
+.intro-text{
+  height: 55px;
+}
 .su{
   position: absolute;
-  left: 40%;
-  top: 22%;
-  font-weight: bold; 
-  /* 볼드체 */
+  height: 100px;
+  left: 38%;
+  top: 15%;
 }
 .ca{
   position: absolute;
-  left: 42%;
-  top: 35%;
-  font-weight: bold; 
-  /* 볼드체 */
+  height: 110px;
+  left: 37%;
+  top: 32%;
 }
 .ys{
   position: absolute;
-  left: 43%;
-  top: 75%;
-  font-weight: bold; 
-  /* 볼드체 */
+  height: 110px;
+  left: 40%;
+  top: 64% ;
 }
 .jj{
   position: absolute;
-  left: 36%;
-  top: 89%;
-  font-weight: bold; 
-  /* 볼드체 */
+  width: 185px;
+  left: 32%;
+  top: 85%;
 }
 .bs{
   position: absolute;
-  left: 59%;
-  top: 62%;
-  font-weight: bold; 
-  /* 볼드체 */
+  height: 81px;
+  left: 52%;
+  top: 58%;
 }
 .pc{
   position: absolute;
-  left: 55%;
-  top: 17%;
-  font-weight: bold; 
-  /* 볼드체 */
+  height: 130px;
+  left: 53%;
+  top: 19%;
+}
+.gj{
+  height: 120px;
+  width: 180px;
+  position: absolute;
+  top: 39%;
+  left: 52%;
+}
+.jj1{
+  height: 120px;
+  width: 170px;
+  position: absolute;
+  top: 48%;
+  left: 38%;
+}
+.sc{
+  height: 170px;
+  width: 150px;
+  position: absolute;
+  left: 48%;
+}
+.logo:hover{
+  transform: scale(1.1);
+  transition-property: transform;
+  transition-duration: 1s;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 .move{
   transform: translateX(300px);
@@ -83,140 +131,133 @@ body{
   width: 100px;
   height: 100px;
 }
-/* .bgc{
-  background-color: #5EBCBB;
-  height: 150px;
-  width: 350px;
-} */
-.seoul1{
+.minibox{
   height: 100px;
   width: 100px;
   position: absolute;
+  border-radius: 20%;
+}
+
+.minibox:hover{
+  transform: scale(1.1);
+  transition-property: transform;
+  transition-duration: 1s;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.seoul1{
   left: 80px;
-  top:140px;
+  top: 200px;
 }
 .seoul2{
-  height: 100px;
-  width: 100px;
-  position: absolute;
   left: 190px;
-  top:140px
+  top:200px;
 }
 .seoul3{
-  height: 100px;
-  width: 100px;
-  position: absolute;
   left: 300px;
-  top:140px
+  top:200px;
 }
 .cheonan1{
-  height: 100px;
-  width: 100px;
-  position: absolute;
   left: 80px;
-  top: 280px;
+  top: 340px;
 }
 .cheonan2{
-  height: 100px;
-  width: 100px;
-  position: absolute;
   left: 190px;
-  top: 280px;
+  top: 340px;
 }
 .cheonan3{
-  height: 100px;
-  width: 100px;
-  position: absolute;
   left: 300px;
-  top: 280px;
+  top: 340px;
 }
 .yeosu1{
-  height: 100px;
-  width: 100px;
-  position: absolute;
   left: 80px;
-  top: 480px;
+  top: 610px;
 }
 .yeosu2{
-  height: 100px;
-  width: 100px;
-  position: absolute;
   left: 190px;
-  top: 480px;
+  top: 610px;
 }
 .yeosu3{
-  height: 100px;
-  width: 100px;
-  position: absolute;
   left: 300px;
-  top: 480px;
+  top: 610px;
 }
 .jeju1{
-  height: 100px;
-  width: 100px;
-  position: absolute;
   left: 80px;
-  top: 600px;
+  top: 750px;
 }
 .jeju2{
-  height: 100px;
-  width: 100px;
-  position: absolute;
   left: 190px;
-  top: 600px;
+  top: 750px;
 }
 .jeju3{
-  height: 100px;
-  width: 100px;
-  position: absolute;
   left: 300px;
-  top: 600px;
+  top: 750px;
 }
 .busan1{
-  height: 100px;
-  width: 100px;
-  position: absolute;
-  left: 830px;
-  top: 480px;
+  left: 840px;
+  top: 530px;
 }
 .busan2{
-  height: 100px;
-  width: 100px;
-  position: absolute;
-  left: 940px;
-  top: 480px;
+  left: 950px;
+  top: 530px;
 }
 .busan3{
-  height: 100px;
-  width: 100px;
-  position: absolute;
-  left: 1050px;
-  top: 480px;
+  left: 1060px;
+  top: 530px;
 }
 .pyeongchang1{
-  height: 100px;
-  width: 100px;
-  position: absolute;
-  left: 810px;
-  top: 100px;
+  left: 820px;
+  top: 260px;
 }
 .pyeongchang2{
-  height: 100px;
-  width: 100px;
-  position: absolute;
-  left: 920px;
-  top: 100px;
+  left: 930px;
+  top: 260px;
 }
 .pyeongchang3{
-  height: 100px;
-  width: 100px;
-  position: absolute;
-  left: 1030px;
-  top: 100px;
+  left: 1040px;
+  top: 260px;
 }
+.gyeongju1{
+  left: 850px;
+  top: 400px;
+}
+.gyeongju2{
+  left: 960px;
+  top: 400px;
+}
+.gyeongju3{
+  left: 1070px;
+  top: 400px;
+}
+.jeonju1{
+  left: 80px;
+  top: 470px;
+}
+.jeonju2{
+  left: 190px;
+  top: 470px;
+}
+.jeonju3{
+  left: 300px;
+  top: 470px;
+}
+.sokcho1{
+  left: 760px;
+  top: 130px;
+}
+.sokcho2{
+  left: 870px;
+  top: 130px;
+}
+.sokcho3{
+  left: 980px;
+  top: 130px;
+}
+
+
 .move{
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 80px;
   animation-name: moving;
   animation-duration: 5s;
   animation-iteration-count: infinite;
@@ -238,8 +279,43 @@ body{
   padding: 0px;
   margin: 0px;
   width: 100%;
-  height: 500px;
-  overflow: hidden;
-  margin: 0px auto;
+  /* height: 700px; */
+  /* overflow: hidden; */
+  /* margin: 0px auto; */
   /* position: absolute; */
+}
+h3{
+  background-color: #5EBCBB;
+  display: inline-block;
+}
+h6{
+  background-color: #5EBCBB;
+  display: inline-block;
+}
+.home{
+  margin : 0 auto;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text-right{
+  text-align: right;
+}
+.videoText{
+  text-align: center;
+  color: white;
+  font-size: 33px;
+}
+.text{
+  color: black;
+}
+
+.detail{
+  width: 100%;
+  height: 600px;
+}
+.yoo{
+  color:black;
+  text-align: right;
 }

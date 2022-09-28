@@ -1,48 +1,50 @@
 import Carousel from 'react-bootstrap/Carousel';
-import React from 'react';
-import bsimage1 from './../image/busan/bsimage1.jpg';
-// import bsimage2 from './../image/busan/bsimage2.jpg';
-import bsimage3 from './../image/busan/bsimage3.jpg';
+import {React} from 'react';
+import {useNavigate} from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
+import { useState } from 'react';
 
 function Busan() {
+    let navigate = useNavigate();
+    let [place, setPlace] = useState([
+        {
+            name: "해운대 해수욕장",
+            way: "부산광역시 해운대구 우동",
+            image: "/image/busan/image1.jpg"
+        },{
+            name: "흰여울 문화마을",
+            way: "부산광역시 영도구 영선동 4가",
+            image: "/image/busan/image2.jpg"
+        },{
+            name: "해동 용궁사",
+            way: "부산광역시 기장군 기장읍 용궁길 86",
+            image: "/image/busan/image3.jpg"
+        }
+    ]);
     return (
-    <Carousel>
-        <Carousel.Item>
-        <img 
-            className="se1"
-            src={bsimage1}
-        />
-        <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-        <img 
-            className="se1"
-            src={bsimage1}
-        />
-
-        <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-        <img 
-            className="se1"
-            src={bsimage3}
-        />
-
-        <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
-        </Carousel.Caption>
-        </Carousel.Item>
-    </Carousel>
-    
+        <div>
+            <Carousel>
+                {
+                    place.map((data,i)=>{
+                        return(
+                            <Carousel.Item>
+                                <img className="se1" src={place[i].image}/>
+                                <Carousel.Caption>
+                                    <div style={{cursor:"pointer" }}onClick={()=>{
+                                        navigate('/busancomp/busan' + ++i)}}>
+                                        <h3>{place[i].name}</h3><br/>
+                                        <h6>{place[i].way}</h6>
+                                    </div>
+                                </Carousel.Caption>
+                            </Carousel.Item>
+                        )
+                    })
+                }
+            </Carousel>
+            <Button className='home' onClick={()=>{
+                navigate("/main")
+            }} variant="secondary">Home</Button>{' '}
+        </div>
     );
 }
 

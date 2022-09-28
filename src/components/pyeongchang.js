@@ -1,48 +1,50 @@
 import Carousel from 'react-bootstrap/Carousel';
 import React from 'react';
-import pcimage1 from './../image/pyeongchang/pcimage1.jpg';
-import pcimage2 from './../image/pyeongchang/pcimage2.jpg';
-import pcimage3 from './../image/pyeongchang/pcimage3.jpg';
+import Button from 'react-bootstrap/Button';
+import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 function Pyeongchang() {
+    let navigate = useNavigate();
+    let [place, setPlace] = useState([
+        {
+            name:"대관령 양떼목장",
+            way:"강원 평창군 대관령면 대관령마루길 483-32",
+            image:"/image/pyeongchang/image1.jpg"
+        },{
+            name:"봉평 메밀밭",
+            way:"강원 평창군 봉평면 창동리 707-2",
+            image:"/image/pyeongchang/image2.jpg"
+        },{
+            name:"발왕산 스카이워크",
+            way:"강원 평창군 올림픽로 715",
+            image:"/image/pyeongchang/image3.jpg"
+        }
+    ])
     return (
-    <Carousel>
-        <Carousel.Item>
-        <img 
-            className="se1"
-            src={pcimage1}
-        />
-        <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-        <img 
-            className="se1"
-            src={pcimage2}
-        />
-
-        <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-        <img 
-            className="se1"
-            src={pcimage3}
-        />
-
-        <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
-        </Carousel.Caption>
-        </Carousel.Item>
-    </Carousel>
-    
+        <div>
+            <Carousel>
+                {
+                    place.map((data,i) =>{
+                        return(
+                            <Carousel.Item>
+                                <img className="se1" src= {place[i].image}/>
+                                <Carousel.Caption>
+                                    <div style={{cursor:"pointer" }}onClick={()=>{
+                                    navigate('/pyeongchangcomp/pyeongchang' + ++i)}}>
+                                        <h3>{place[i].name}</h3><br/>
+                                        <h6>{place[i].way}</h6>
+                                    </div>
+                                </Carousel.Caption>
+                            </Carousel.Item>
+                        )
+                    })
+                }
+            </Carousel>
+            <Button className='home' onClick={()=>{
+                    navigate("/main")
+                }} variant="secondary">Home</Button>{' '}
+        </div>
     );
 }
 
