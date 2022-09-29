@@ -14,7 +14,7 @@ function Busan() {
         },{
             name: "흰여울 문화마을",
             way: "부산광역시 영도구 영선동 4가",
-            image: "/image/busan/image2.jpg"
+            image: "/image/busan/image2.JPG"
         },{
             name: "해동 용궁사",
             way: "부산광역시 기장군 기장읍 용궁길 86",
