@@ -146,7 +146,7 @@ function BtnImg1(props){ //function은 return을 만나면 끝나버림
         return(
             <div style={{cursor:"pointer" }} onClick={()=>{navigate("/busan")}}>
             <img className='minibox busan1' src={process.env.PUBLIC_URL+"/image/busan/image1.jpg"} ></img>
-            <img className='minibox busan2' src={process.env.PUBLIC_URL+"/image/busan/image2.jpg"}></img>
+            <img className='minibox busan2' src={process.env.PUBLIC_URL+"/image/busan/image2.JPG"}></img>
             <img className='minibox busan3' src={process.env.PUBLIC_URL+"/image/busan/image3.jpg"} ></img>
             </div>)
         }
